@@ -1,0 +1,76 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block titel %}
+    all medicine
+{% endblock titel %}
+{% block maincontent %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="list-group">
+       <a href="{% url "allmedicine" %}" class="list-group-item {{btn}}">All MEDICINE</a> 
+       <a href="{% url "medicine" "baby" %}" class="list-group-item {{bb}}">Baby Corner</a> 
+       <a href="{% url "medicine" "female" %}" class="list-group-item {{bf}}">Female Corner</a> 
+       <a href="{% url "medicine"  "male" %}" class="list-group-item {{bm}}">Male Corner</a>
+       <a href="{% url "medicine"  "sex" %}" class="list-group-item {{bs}}">AdultCorner</a>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="container">
+  <div class="row pt-4">
+      
+    {% for b in pd %}
+      
+    
+
+
+    <div class="col-sm-4 col-6 pt-2">
+      <div class="card" >
+        
+        {% if btn %}
+          <span></span>
+        {% else%}
+        <span class="text-center"><img src="{{b.product_image.url}}" class="card-img-top"alt="..."></span>
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title"><strong> {{b.titel|truncatechars:9|capfirst}}</strong></h5>
+          <p class="card-subtitle text-dark"><abbr title="Manufactured">{{b.manufactured_by|default:"None"}}</abbr></p>
+          
+          <p class="card-subtitle text-dark">[Quantity: 1 box]</p>
+          <h4 class="card-text"><strong>TK     : {{b.unit_price}}</strong></h4>
+          <div class="row">
+            <a href='{% url "product-detail" b.id%}' class="btn btn-warning col-sm-6 col-5 pt-3 ">Info</a>
+            <form action="/add-to-cart" class="d-inline col-sm-6 col-6 ">
+
+              <input type="hidden" name="prod_id" value={{b.id}} id="prod_id">
+              <button type="submit" class="btn btn-danger text-dark" ><strong>Order Now</strong></button>
+              
+              
+              </form>
+
+
+          </div>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+{% endblock maincontent %}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

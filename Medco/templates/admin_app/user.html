@@ -1,0 +1,65 @@
+{% extends 'admin_app/base.html' %}
+{% load static %}
+
+
+{% block titel %}
+    User
+{% endblock titel %}
+
+
+{% block body %}
+
+<h1 class="text-center"> Users Information</h1>
+<hr>
+
+<table class="table table-success table-striped table-hover">
+  <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">USERNAME</th>
+        <th scope="col">EMAIL ADDRESS</th>
+        <th scope="col">FIRST NAME</th>
+        <th scope="col">MOBILE NUMBER</th>
+        
+
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      
+      {% for user in users %}
+      
+      {% if user.is_superuser %}
+        
+      
+        
+
+       {% else %} 
+      
+      <tr>
+        <th scope="row">{{ forloop.counter0 }}</th>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.first_name|capfirst}}</td>
+        <td>
+        {% for st in sta %}
+          
+        
+         
+         {% if st.user.username == user.username %}
+         +{{st.customer.number}} <br>
+         {% endif %}
+            
+        
+        {% endfor %}
+      </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+      
+    </tbody>
+</table>
+
+
+{% endblock body %}

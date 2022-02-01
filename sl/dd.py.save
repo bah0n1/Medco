@@ -1,0 +1,11 @@
+# from openpyxl import Workbook
+# import openpyxl
+
+wb = Workbook()
+wb.save("medicine.xlsx")
+wb = openpyxl.load_workbook("medicine.xlsx")
+sheet= wb["Sheet"]
+
+# print(sheet.cell(366,1).value)
+#for md in range (1,10):
+ #   print(md)

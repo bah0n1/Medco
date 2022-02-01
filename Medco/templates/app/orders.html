@@ -1,0 +1,141 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block maincontent %}
+<div class="container my-5">
+ <div class="row">
+ <h3>Welcome {{request.user.first_name}}</h3>
+  <div class="col-sm-2 border-end">
+   <ul class="list-unstyled">
+    <li class="d-grid"><a href="{% url 'orders' %}" class="btn btn-primary">Orders</a></li>
+   </ul>
+  </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">ORDER INFORMATION</div>
+        <div class="col-6">ORDER STATUS</div>
+        <hr>
+        
+        {% if sta %}
+          
+        
+          
+        <div class="col-12">
+            <hr>
+        
+        {% for st in sta reversed %}
+            
+        <hr>
+          
+        <div class="row">
+        <div class="col-sm-6 col-6">
+            <div class="card-body">
+                <h5>Product: {{st.product.titel}}</h5>
+                <p>Quantity: {{st.quantity}}</p>
+                <p class="fw-bold">Price: {{st.product.unit_price}} * {{st.quantity}} = <strong>{{st.total_cost}} Tk</strong></p>
+                <p class="text-capitalize">Shipping Address: {{st.customer.locality}},{{st.customer.city}}</p>
+                <p>Number: +{{st.customer.number}}</p>
+                <p>Order Time: {{st.order_date}}</p>
+
+              </div>
+            </div>
+        
+        <div class="col-sm-6 col-6">
+            <br>
+            <br>
+            
+            {% if st.status == "pending" %}
+            <div class="container text-center">
+              <img  class="img-fluid" style="height: 150px;" src="{% static 'medco/img/pending.gif' %}" alt="">
+                
+              </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>            
+              </div>
+              <p class="text-center">status: <strong>{{st.status}}</strong> </p>
+            {% endif %}
+
+
+            {% if st.status == "accepted" %}
+            <div class="container text-center">
+              <img  class="img-fluid" style="height: 150px;" src="{% static 'medco/img/accept.webp' %}" alt="">
+                
+              </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>            
+              </div>
+              <p class="text-center">status: <strong>{{st.status}}</strong> </p>
+            {% endif %}
+            
+            {% if st.status == "cancel" %}
+            <div class="container text-center">
+              <img  class="img-fluid" style="height: 150px;" src="{% static 'medco/img/dp.gif' %}" alt="">
+                
+              </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p class="text-center">status: <strong>{{st.status}}ed</strong> </p>
+            {% endif %}
+
+            {% if st.status == "prepairing" %}
+            <div class="container text-center">
+              <img  class="img-fluid" style="height: 150px;" src="{% static 'medco/img/prepairing.gif' %}" alt="">
+                
+              </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>            
+              </div>
+              <p class="text-center">status: <strong>{{st.status}}</strong> </p>
+            {% endif %}
+
+            {% if st.status == "on the way" %}
+            <div class="container-fluid text-center">
+            <img src="{% static 'medco/img/giphy.gif' %}"  alt="">
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>            
+              </div>
+              <p class="text-center">status: <strong>{{st.status}}</strong> </p>
+            {% endif %}
+            
+            {% if st.status == "delivered" %}
+            <div class="container-fluid text-center">
+            <img  src="{% static 'medco/img/200w.webp' %}" class="img-fluid" style="height: 150px;" alt="">
+              
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>            
+              </div>
+              <p class="text-center">status: <strong>{{st.status}}</strong> </p>
+              
+            {% endif %}
+            
+        </div>
+        </div>
+        <hr>
+        
+        {% endfor %}
+        {% else %}
+   <div class="container alert alert-info">
+    <p class=" text-center">You didn't order anything!</p>
+
+     <p class=" text-center">You need to cart fast!</p>
+   </div>
+   {% endif %}
+        </div>
+
+
+
+
+        </div>
+        </div>
+
+
+
+   
+ 
+{% endblock maincontent %}

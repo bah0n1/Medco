@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block maincontent %}
+<div class="container">
+  <div class="row my-3">
+   <div class="col-sm-6 offset-sm-3">
+    <h3 class="text-center">Password Reset Completed!</h3>
+   
+    
+    <hr>
+    <div class="text-center text-primary fw-bold"><small>help ? <a href="{% url 'login' %}"
+        class="text-danger">Login Now!</a> </small></div>
+    
+   </div>
+  </div>
+ </div>
+{% endblock maincontent %}

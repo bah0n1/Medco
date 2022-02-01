@@ -1,0 +1,70 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block maincontent %}
+<div class="container my-5">
+ <div class="row">
+    <h3>Welcome <span class="text-capitalize">{{request.user.first_name}}</span></h3>
+
+  <div class="col-sm-2 border-end">
+   <ul class="list-unstyled">
+    <li class="d-grid"><a href="{% url 'profile' %}" class="btn ">Add New Address</a></li>
+    <li class="d-grid"><a href="{% url 'address' %}" class="btn {{btn}}">All Address</a></li>
+   </ul>
+  </div>
+  <div class="col-sm-9 offset-sm-1">
+      
+      {% if ad %}
+    <div class="row">
+    
+    {% for a in ad %}
+        
+    
+        
+    <div class="col-sm-6">
+     <div class="card">
+      <div class="card-body">
+       <h3>Address {{forloop.counter}}</h3>
+       <p class="text-capitalize">Name: {{a.name}}</p>
+       <p>Number: +{{a.number}}</p>
+       <p>Address: {{a.locality}} </p>
+       <p>City: {{a.city}}</p>
+       <div class="container-fluid">
+         <div class="row">
+           <div class="col-9 text-right">
+            <a class="btn btn-warning" href="{% url "ed_add" a.id %}">Edit</a> 
+              
+              
+              
+           </div>
+           <div class="col-3 text-left">
+            <form action="{% url "del_add" a.id %}" method="POST">
+              {% csrf_token %}
+              
+              <td><button type="submit"  class="btn btn-danger" >Delete</button></td>
+              
+             </form>
+
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+    </div>
+    {% endfor %} 
+    <br>
+   </div>
+   {% else %}
+   <div class="alert alert-warning" role="alert">
+    opZ! plz add some address now! 
+    <div class="text-center text-primary fw-bold"><small> Help ? <a href="{% url 'profile' %}"
+        class="text-danger">ADD Address</a> </small></div>
+    {% endif %}
+   </div> 
+    <br>
+  </div>
+ </div>
+</div>
+<br>
+<br>
+{% endblock maincontent %}

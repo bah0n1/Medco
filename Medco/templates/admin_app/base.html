@@ -1,0 +1,71 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link type="text/css" href="{% static 'medco_ad/images/icons/css/font-awesome.css' %}" rel="stylesheet">
+
+    <title>Medco admin|{% block titel %}{% endblock titel %}
+    </title>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'dashboard' %}">
+            <img src="{% static 'medco/img/logo.png' %}" style="width: 80px;" class="d-inline-block align-text-top img-fluid">
+            
+          </a>
+          
+          <a href="{% url 'dashboard' %}" class="btn bg-info">MedCO ADMIN</a>
+        </div>
+        
+      </nav>
+      <hr>
+      <div class="container-fluid">
+          <div class="row">
+              <!-- slidbar starting -->
+              <div class="col-3 ">
+                  
+                <div class="btn-group-vertical btn-group-lg sticky-top">
+                   
+                    <a href="{% url 'dashboard' %}" class="btn btn-dark text-white "><i class="menu-icon icon-dashboard"></i>   Dashboard</a>
+                    <a href="{% url "user" %}" class="btn btn-dark text-white "><i class="fas fa-users"></i>   Users <span class="badge rounded-pill bg-primary">4</span></a>
+                    <a href="{% url 'user_per' %}" class="btn btn-dark text-white "><i class="fas fa-user-cog"></i>   User permission </a>
+                                
+                    <a href="form.html" class="btn btn-dark text-white "><i class="fas fa-syringe"></i> Add medicine</a>
+                    
+                    <a href="charts.html" class="btn btn-dark text-white "><i class="fas fa-user-plus"></i> Add user </a>
+                    <a href="#" class="btn btn-dark text-white "><i class="menu-icon icon-signout"></i> Logout </a>
+                    
+                  </div>
+                  
+               
+                
+              
+
+
+              </div>
+              
+              <!-- finished slidebar -->
+              <div class="col-9">
+              {% block body %}{% endblock body %}
+
+              </div>
+               
+    
+    
+    
+    
+    
+    <script src="https://kit.fontawesome.com/aaeb4dffdc.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>

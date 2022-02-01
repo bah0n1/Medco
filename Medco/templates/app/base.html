@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static 'medco/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'medco/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'medco/css/style.css' %}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    {% block cssa %}{% endblock cssa %}
+
+    
+    {% block css %}{% endblock css %}
+      
+    <style>
+      .jumbo-img{
+   background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("{% static "medco/img/new.jpg" %}");
+   background-size:100%;
+}
+.bootom-img{
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("{% static "medco/img/4702120.jpg" %}");
+   background-size:100%;
+}
+.a{
+  background-color: #2f3542;
+  width: 150px;
+}
+
+    </style>
+    <title>Medco|
+    {% block titel %}{% endblock titel %}
+        </title>
+</head>
+<body>
+    
+      
+<!-- base.html navbar willshow all page-->
+<div class="medco-navbar sticky-top">
+  <nav class="navbar navbar-light" style="background-color: #ffffff;">
+       <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon" ></span>
+       </button>
+       
+       <a class="navbar-brand col-4 text-right ml-2" href="/">
+        <img src="{% static 'medco/img/logo.png' %}"  class="img-fluid " style="width: 100px;">
+      </a>
+       <span class="dropdown">
+         
+         <button class="btn  btn-sm dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user-circle fa-lg" style="color: #0a0a0a;"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
+          {% if request.user.is_authenticated %}
+            
+          
+            
+          <a class="dropdown-item" href="{% url "profile" %}">Profile</a>
+          <a class="dropdown-item" href="{% url "changepassword" %}">ChangePassword</a>
+          <a class="dropdown-item" href="{% url "logout" %}">Logout</a>
+          {% else %}
+          <a class="dropdown-item" href="{% url "login" %}">Login</a>
+          <a class="dropdown-item" href="{% url "customerregistration" %}">Registation</a>
+          {% endif %}
+          <a class="navbar-toggler dropdown-item "  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo05" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="{% static 'medco/img/translate.svg' %}" alt="svg_language" style="width: 25px;"   > <span>Language</span>
+          </a>
+          
+
+          
+          
+        </div>
+        </span>
+        <span class="dropdown">
+          <button class="btn  btn-sm dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-cart-plus fa-lg" style="color: #0a0a0a;"></i></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url "showcart" %}" >Cart</a>
+            <a class="dropdown-item" href="{% url "orders" %}" >Orders</a>
+          </div>
+        </span>
+        
+        {% if home %}
+        <a class="navbar-toggler col-1 text-center pl-1"  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo05" aria-controls="navbarTogglerDemo05" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="{% static 'medco/img/translate.svg' %}" alt="svg_language" style="width: 22px;"   > 
+        </a>
+        {% else %}
+        <a class="navbar-toggler col-1 text-center pl-1"  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo04" aria-controls="navbarTogglerDemo04" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-search fa-lg" style="color: #0a0a0a; width: 20px;"></i>
+        </a>
+        {% endif %}
+          
+         
+         
+
+             
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo05">
+          <div id="google_translate_element" class="text-center"></div>
+        </div>
+        <br>
+        
+       <div class="collapse navbar-collapse" id="navbarTogglerDemo04">
+        <form   action="/search">
+        
+          <div class="text-center pt-4">
+            <input type="search" placeholder="Medicine name....." aria-label="Search" name="search" id="search_m">
+            <button type="submit" class="btn-primary">Search</button>
+               
+           </div>
+        </form>
+         
+           
+       </div>
+       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+           <li class="nav-item active">
+             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="{% url "allmedicine" %}">All Medicine</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="{% url "medicine" "baby" %}" >Baby product</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="{% url "medicine" "female" %}" >Female Care</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="{% url "medicine" "male" %}" >Male Care</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="{% url "customerregistration" %}">Register</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="{% url "login" %}" >Login</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="about.html">About Us</a>
+           </li>
+           <li class="nav-item">
+             <div id="google_translate_element"></div>
+           </li>
+         </ul>
+         
+       </div>
+   </nav>
+</div>
+
+
+{% block homesearch %}{% endblock homesearch %}
+{% block homeslider %}{% endblock homeslider %}
+{% block maincontent %}{% endblock maincontent %}
+<div class="jumbotron bootom-img">
+    <div class="row">
+      <div class="text-white col-sm-4 col-6 pt-4">About Us</div>
+      <div class="text-white col-sm-4 col-6 pt-4">Make Money with us!</div>
+      <div class="text-white col-sm-4 col-6 pt-4">Payment Methods!
+      <div class="text-center"><img src="{% static 'medco/img/Payment-option.png' %}" alt="" class="img-fluid"></div>
+      </div>
+      <div class="text-white col-sm-4 col-6 pt-4">Customer Care!</div>
+      <div class="text-white col-sm-4 col-6 pt-4">Follow Us!</div>
+      
+  </div>
+  </div>
+  <h6 class="text-right text-muted pr-5">© Medco 2021</h6>
+  
+
+    
+  
+  {% block java %}{% endblock java %}
+    
+      <script src="{% static "medco/js/jqury.js" %}"></script>
+      <script src="{% static "medco/js/popper.js" %}"></script>
+      <script src="{% static "medco/js/bootstrap.js" %}"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="{% static 'medco/app/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'medco/js/all.min.js' %}"></script>
+    <script src="{% static 'medco/js/src.js' %}"></script>
+    <script src="{% static 'medco/js/myscript.js' %}"></script>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+  </html>
+    
+    

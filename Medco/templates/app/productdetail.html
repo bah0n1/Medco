@@ -1,0 +1,86 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Product Detail{% endblock title %}
+{% block maincontent %}
+<div class="container my-5">
+ 
+   <h2>Name: {{pd.titel|truncatechars:12|capfirst}}</h2>
+   <hr>
+   <h5>Generic name: <span>{{pd.generic_name}}</span></h5>
+   <h6 class="text-muted">strength: <span>{{pd.strength}}</span></h6>
+   <h6 class="text-muted">Manufactured by: <span>{{pd.manufactured_by}}</span></h6>
+   <h5 class="text-muted">Unit price: <small class="fw-light text-decoration-line-through text-dark">{{pd.unit_price}}</small></h5>
+   <h4 >Pack price: <small class="fw-light text-decoration-line-through">{{pd.pack_price}}</small></h4> <br> <br>
+
+<form action="/add-to-cart" class="d-inline">
+
+<input type="hidden" name="prod_id" value={{pd.id}} id="prod_id">
+<button type="submit" class="btn btn-primary shadow px-5 py-2" >Add to Cart</button>
+
+
+</form>
+<!-- <a href="{% url 'checkout' %}" class="btn btn-danger shadow px-5 py-2 ms-4">Buy Now</a> -->
+
+
+
+
+   
+   <h5 class="mt-5">More Information</h5>
+   <ul>
+     
+     {% if pd.indications %}
+    <li class="bg-dark text-white">Indications <p class="container bg-white text-dark">{{pd.indications}}</p></li>
+       
+     {% endif %}
+     
+     {% if pd.therapeutic_class %}
+    <li class="bg-dark text-white">Therapeutic Class <p class="container bg-white text-dark">{{pd.therapeutic_class}}</p></li>
+     {% endif %}
+     
+     {% if pd.pharmacology %}
+    <li class="bg-dark text-white">Pharmacology <p class="container bg-white text-dark">{{pd.pharmacology}}</p></li>
+       
+     {% endif %}
+     
+     {% if pd.dosag_and_administration %}
+    <li class="bg-dark text-white">Dosage & Administration <p class="container bg-white text-dark">{{pd.dosag_and_administration}}</p></li>
+       
+     {% endif %}
+     
+     {% if pd.interaction %}
+    <li class="bg-dark text-white">Interaction <p class="container bg-white text-dark">{{pd.interaction}}</p></li>
+       
+     {% endif %}
+    
+    {% if contraindications %}
+    <li class="bg-dark text-white">Contraindications<p class="container bg-white text-dark">{{pd.contraindications}}</p></li>
+      
+    {% endif %}
+    
+    {% if pd.side_effects %}
+    <li class="bg-dark text-white">Side Effects<p class="container bg-white text-dark">{{pd.side_effects}}</p></li>
+      
+    {% endif %}
+      
+    
+    {% if pd.pregnancy_and_lactation %}
+    <li class="bg-dark text-white">Pregnancy & Lactation<p class="container bg-white text-dark">{{pd.pregnancy_and_lactation}}</p></li>
+      
+    {% endif %}
+        
+       
+    
+    {% if pd.storage_conditions %}
+    <li class="bg-dark text-white">Storage Conditions<p class="container bg-white text-dark">{{pd.storage_conditions}}</p></li>
+      
+    {% endif %}
+      
+         
+
+    
+   
+   </ul>
+  </div>
+ 
+
+{% endblock maincontent %}

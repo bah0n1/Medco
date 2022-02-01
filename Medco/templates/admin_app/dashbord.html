@@ -1,0 +1,100 @@
+{% extends 'admin_app/base.html' %}
+{% load static %}
+
+
+{% block titel %}
+    Dashboard
+{% endblock titel %}
+
+
+{% block body %}
+<div class="container">
+    <div class="d-grid gap-3">
+       <div class="row p-4 ">
+           <div class="col-4">
+            <a href="#" class="btn btn-outline-info btn-lg"><i class="far fa-pause-circle"></i>
+                
+                <p >
+                    Order Pending <span class="badge rounded-pill bg-warning text-dark">{{st.st_pending}}</span> </p>
+            </a>
+           </div>
+           <div class="col-4">
+            <a href="#" class="btn btn-outline-info btn-lg"><i class="far fa-check-circle"></i>
+                
+                <p >
+                    Order Accepted <span class="badge rounded-pill bg-warning text-dark">{{st.st_accepted}}</span> </p>
+            </a>
+           </div>
+           <div class="col-4">
+            <a href="#" class="btn btn-outline-info btn-lg"><i class="far fa-times-circle"></i>
+                
+                <p >
+                    Order Canceled <span class="badge rounded-pill bg-warning text-dark">{{st.st_cancel}}</span> </p>
+            </a>
+           </div>
+        
+        </div>
+
+
+        <div class="row p-4 ">
+            <div class="col-4">
+             <a href="#" class="btn btn-outline-info btn-lg"><i class="fas fa-truck-loading"></i>
+                 
+                 <p >
+                    Order Prepairing <span class="badge rounded-pill bg-warning text-dark">{{st.st_prepairing}}</span> </p>
+             </a>
+            </div>
+            <div class="col-4">
+             <a href="#" class="btn btn-outline-info btn-lg"><i class="fas fa-truck"></i>
+                 
+                 <p >
+                    Order on the way <span class="badge rounded-pill bg-warning text-dark">{{st.st_on_the_way}}</span> </p>
+             </a>
+            </div>
+            <div class="col-4">
+             <a href="#" class="btn btn-outline-info btn-lg"><i class="fas fa-box-open"></i>
+                 
+                 <p >
+                    Order Delivered <span class="badge rounded-pill bg-warning text-dark">{{st.st_delivered}}</span> </p>
+             </a>
+            </div>
+         
+         </div>
+
+
+
+         <div class="row p-4 ">
+            
+            <div class="col-4">
+             <a href="#" class="btn btn-outline-info btn-lg"><i class="fas fa-file-prescription"></i>
+                 
+                 <p >
+                    Prescription <span class="badge rounded-pill bg-warning text-dark">465</span> </p>
+             </a>
+            </div>
+            <div class="col-4">
+             <a href="#" class="btn btn-outline-info btn-lg"><i class="icon-money"></i>
+                 
+                 <p >
+                    Today Sell <p class="">Taka   :<span class="badge rounded-pill bg-warning text-dark">{{st.st_sell_price}} tk</span></p></p> </p>
+             </a>
+            </div>
+            <div class="col-4">
+                <a href="#" class="btn btn-outline-info btn-lg"><i class="fas fa-plus-circle"></i>
+                    
+                    <p >
+                       Add Order  </p>
+                </a>
+               </div>
+         
+         </div>
+
+
+       
+    </div>
+
+
+    </div>
+    <hr>
+{% endblock body %}
+    

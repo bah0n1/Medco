@@ -1,0 +1,51 @@
+1620748543278	geckodriver	INFO	Listening on 127.0.0.1:48083
+1620748543317	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile15GoMG"
+1620748548344	Marionette	INFO	Listening on port 43447
+1620748548360	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4379493546500231&output=html&h=90&adk=84051996&adf=4285048842&pi=t.aa~a.3542968748~rp.1&w=1139&fwrn=4&fwrnh=100&lmt=1620748584&rafmt=1&to=qs&pwprc=6973637874&psa=1&format=1139x90&url=https%3A%2F%2Fmedex.com.bd%2Fbrands%2F30232%2Fisentin-m-25mg&flash=0&fwr=0&pra=3&rpe=1&resp_fmts=3&wgl=1&fa=40&dt=1620748584616&bpp=3&bdt=1097&idt=-M&shv=r20210506&cbv=%2Fr20190131&ptt=9&saldr=aa&abxe=1&cookie=ID%3D0fe76992b70ca918-2260322e21c8008d%3AT%3D1620727021%3ART%3D1620727021%3AS%3DALNI_MbUOhO7OF_LU0dIyagAGIUlFeHc0w&prev_fmts=1139x280%2C1139x280%2C1139x280%2C0x0&nras=2&correlator=5104326282178&frm=20&pv=1&ga_vid=811796609.1620748552&ga_sid=1620748584&ga_hid=963479419&ga_fc=0&u_tz=-240&u_his=6&u_java=0&u_h=1080&u_w=1920&u_ah=1080&u_aw=1920&u_cd=24&u_nplug=0&u_nmime=0&adx=385&ady=1131&biw=1908&bih=947&scr_x=0&scr_y=0&eid=31061034&oid=3&pvsid=4135642974548028&pem=880&eae=0&fc=896&brdim=1366%2C0%2C1366%2C0%2C1920%2C0%2C1920%2C1052%2C1920%2C947&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=128&bc=29&ifi=5&uci=a!5&btvi=3&xpc=JWsuMnTyT0&p=https%3A//medex.com.bd&dtd=185, line 1: SecurityError: Permission denied to access property Symbol.toPrimitive on cross-origin object
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4379493546500231&output=html&h=90&adk=84051996&adf=4285048842&pi=t.aa~a.3542968748~rp.1&w=1139&fwrn=4&fwrnh=100&lmt=1620748680&rafmt=1&to=qs&pwprc=6973637874&psa=1&format=1139x90&url=https%3A%2F%2Fmedex.com.bd%2Fbrands%2F30249%2Fd-20000-20000iu&flash=0&fwr=0&pra=3&rpe=1&resp_fmts=3&wgl=1&fa=40&dt=1620748680194&bpp=3&bdt=1067&idt=-M&shv=r20210506&cbv=%2Fr20190131&ptt=9&saldr=aa&abxe=1&cookie=ID%3D0fe76992b70ca918-2260322e21c8008d%3AT%3D1620727021%3ART%3D1620727021%3AS%3DALNI_MbUOhO7OF_LU0dIyagAGIUlFeHc0w&prev_fmts=1139x280%2C1139x280%2C1139x280%2C0x0&nras=2&correlator=3448321576289&frm=20&pv=1&ga_vid=811796609.1620748552&ga_sid=1620748680&ga_hid=1825587308&ga_fc=0&u_tz=-240&u_his=23&u_java=0&u_h=1080&u_w=1920&u_ah=1080&u_aw=1920&u_cd=24&u_nplug=0&u_nmime=0&adx=385&ady=1031&biw=1908&bih=947&scr_x=0&scr_y=0&eid=42530672%2C31061034&oid=3&pvsid=3230550866681977&pem=880&eae=0&fc=896&brdim=1366%2C0%2C1366%2C0%2C1920%2C0%2C1920%2C1052%2C1920%2C947&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=128&bc=29&ifi=5&uci=a!5&btvi=3&xpc=zbLUfoD8Md&p=https%3A//medex.com.bd&dtd=200, line 1: SecurityError: Permission denied to access property Symbol.toPrimitive on cross-origin object
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 
+JavaScript error: https://tpc.googlesyndication.com/pagead/js/r20210506/r20110914/client/qs_click_protection_fy2019.js, line 15: NS_ERROR_NOT_INITIALIZED: 

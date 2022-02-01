@@ -1,0 +1,84 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block maincontent %}
+<div class="container">
+ <div class="row mt-5">
+  <div class="col-sm-6">
+    <h4>Order Summary</h4>
+    <hr>
+    
+    {% for cr in cart %}
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5>Product: {{cr.product.titel}}</h5>
+          <p>Quantity: {{cr.quantity}}</p>
+          <p class="fw-bold">Price: {{cr.product.unit_price}} * {{cr.quantity}} = <strong>{{cr.total_cost}}</strong></p>
+        </div>
+      </div>
+      {% endfor %}
+      <hr>
+      <p class="fw-bold alert alert-info"><strong>TotalCost+Delivery<small>(Free)</small>=  {{ta}}</strong></p>
+  <hr>
+    
+  </div>
+  <br>
+  <br>
+  <hr>
+  <div class="col-sm-4 offset-sm-1">
+    <h4 class="text-center bg-secondary">Select Shipping Address</h4>
+    
+    {% if add %}
+      
+    
+      
+  
+    <form action="/paymentdone">
+      
+      {% for ad in add %}
+      <div class="card alert alert-warning text-dark">
+        <div class="card-body">
+        <h5>{{ad.name}}</h5>
+        <p>{{ad.locality}},{{ad.city}}</p>
+        <p>+{{ad.number}}</p>
+        </div>
+        <span class="form-check mt-2 mb-5">
+          <input class="form-check-input" required type="radio" value="{{ad.id}}" name="custid" id="custadd{{forloop.counter}}">
+          <label class="form-check-label fw-bold" for="">
+            Address: {{forloop.counter}} </label>
+        </span>
+      </div>
+        
+        {% endfor %}
+        {% else %}
+        <div class="alert alert-warning" role="alert">
+          opZ! plz add some address now! 
+          <div class="text-center text-primary fw-bold"><small> Help ? <a href="{% url 'profile' %}"
+              class="text-danger">ADD Address</a> </small></div>
+        {% endif %}
+        {% if add %}
+        <div class="form-check mt-2 mb-5">
+        
+        <label class="form-check-label fw-bold alert alert-danger" for=""><input type="checkbox" name="checkbox" value="agree" required id="chk"><small> <strong> I read all terms and conditions and i accept all terms and conditions!</strong> <a href="{% url "terms" %}"><span class="">terms and conditions</span></a></small></label></div>
+       
+       
+         
+       
+        <div class="text-end text-center">
+          <button type="submit" class="btn btn-warning mt-3 px-5 fw-bold">Continue</button>
+        </div>
+        {% else %}
+        <div class="text-end text-center">
+          <button type="submit" class="btn btn-warning mt-3 px-5 fw-bold" disabled >Continue</button>
+        </div>
+        {% endif %}
+         
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+{% endblock maincontent %}
